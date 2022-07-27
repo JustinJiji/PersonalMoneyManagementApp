@@ -11,7 +11,8 @@ class MoneyManagementBottomNavigationBar extends StatelessWidget {
         builder: (ctx, dynamic updatedValue, _) {
           return BottomNavigationBar(
             currentIndex: updatedValue,
-            onTap: (newValue) => ScreenHome.bottomNavigationNotifier.value = newValue,
+            onTap: (newValue) =>
+                ScreenHome.bottomNavigationNotifier.value = newValue,
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(
@@ -24,7 +25,13 @@ class MoneyManagementBottomNavigationBar extends StatelessWidget {
                   Icons.category,
                 ),
                 label: 'Categories',
-              )
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.pie_chart,
+                ),
+                label: 'Chart',
+              ),
             ],
           );
         });
